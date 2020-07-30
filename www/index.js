@@ -1,14 +1,9 @@
-import { PlayResult, SpellingBeeGame } from "spelling-bee";
-const fetch = require("node-fetch");
+import { SpellingBeeGame } from "spelling-bee";
 let $ = require("jquery");
 let progressBar = require('progressbar.js')
 
-
-const mw_url = 'http://gist.github.com/nicholas-miklaucic/dbf1687b6c5759a2aa1579347069a09c/raw/534bed607e98e7982bb5bf7d51dd16f7ff968f9a/main_words.txt';
-const swears_url = 'http://gist.github.com/nicholas-miklaucic/dbf1687b6c5759a2aa1579347069a09c/raw/534bed607e98e7982bb5bf7d51dd16f7ff968f9a/swears.txt';
-
-// let main_words = fs.readFileSync("~/programs/lexi/2of12inf.txt");
-// let swears = fs.readFileSync("~/programs/lexi/swears.txt");
+import mw_txt from './2of12inf.txt';
+import swears_txt from './swears.txt';
 
 const VALID = 0;
 const ALREADY_PLAYED = 1;
@@ -39,11 +34,8 @@ if (currentTheme) {
 
 
 async function main() {
-    const main_req = await fetch(mw_url);
-    const swears_req = await fetch(swears_url);
-
-    const main_words = await main_req.text();
-    const swears = await swears_req.text();
+    const main_words = mw_txt;
+    const swears = swears_txt;
 
     const url_params = new URLSearchParams(window.location.search);
     const center_letter = url_params.get('center').toLowerCase();
@@ -56,7 +48,6 @@ async function main() {
     $("#score-bar").attr("aria-valuemax", max_score);
 
     let curr_word = "";
-    let curr_score = 0;
     let played_words = [];
     $("#curr-word").empty();
     $("#played-words").empty();
