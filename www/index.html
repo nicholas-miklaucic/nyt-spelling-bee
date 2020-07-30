@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spelling Bee! (NYT Rules)</title>
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+        <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+        <style type="text/css">
+
+         @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=3a44cfdb-e9a8-463d-b119-90dca2bf723d");
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 100;
+             src:url("Fonts/198c2095-dbb0-4081-b279-356541474a8b.woff2") format("woff2"),url("Fonts/bff75705-04bd-4e80-93d7-ee67e556bd23.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 200;
+             src:url("Fonts/ad41ee97-c0d7-4f57-b3a9-a5f0e5598456.woff2") format("woff2"),url("Fonts/aa50cf2e-8f74-4317-a0aa-43902e3e8180.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 300;
+             src:url("Fonts/3e763f43-c1f7-440c-8592-cb253ff58095.woff2") format("woff2"),url("Fonts/01bf77f8-8fcc-4fd3-bca5-1edd2cf98ca9.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 400;
+             src:url("Fonts/4063af43-64b6-43d0-a26e-06aa4f85363d.woff2") format("woff2"),url("Fonts/3dcd51dd-b610-42f0-aac7-c434471cd2fb.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 500;
+             src:url("Fonts/ef5acfbd-ac6c-4686-9e7c-ae99c0aeeb06.woff2") format("woff2"),url("Fonts/d7d3fa00-96bc-4a38-a20a-1566aa9b3f5e.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 700;
+             src:url("Fonts/46df8cfa-8e15-42de-9720-aba591256375.woff2") format("woff2"),url("Fonts/a74fcfe7-67b6-4553-92f7-f5be60252c75.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 800;
+             src:url("Fonts/c41cf10f-059f-4a9c-bea1-b23be42a13fa.woff2") format("woff2"),url("Fonts/76660e90-37e4-4c4d-8091-30a06f09cb51.woff") format("woff");
+         }
+         @font-face{
+             font-family:"Applied Sans";
+             font-weight: 900;
+             src:url("Fonts/7c825263-fc78-40ea-8e0e-63185d25be7c.woff2") format("woff2"),url("Fonts/de1f093a-629c-4bbd-bab0-85481537bfcb.woff") format("woff");
+         }
+        </style>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div class="container" id="body">
+            <div class="columns">
+                <div class="column col-3">
+                    <div class="column col-12 text-center">
+                        <h1>Spelling Bee</h1>
+                        <p>Blah blah blah</p>
+                        <input id="toggle-theme" type="button" class="btn btn-lg mx-auto"
+                               value="Toggle Light/Dark Theme">
+                    </div>
+                </div>
+                <div class="divider-vert" data-content=""></div>
+                <div class="column">
+                    <div class="columns">
+                        <div class="column col-12">
+                            <div id="alert-box">
+                                
+                            </div>
+                        </div>
+                        <div class="column col-12">
+                            <div contenteditable="true" id="curr-word" type="text"
+                                 data-ph="Enter words here..." spellcheck="false"></div>
+                        </div>
+                        <div class="column col-2 col-mx-auto">
+                            <input id="submit" type="button" class="btn btn-block btn-lg btn-primary" value="Play!">
+                        </div>
+                        <div class="column col-12">
+
+                        </div>
+                        <div class="column col-12" id="letter-col">
+                            <div id="letter-hex">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other1">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other2">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other3">
+                                <input type="button" class="letter
+                                             letter-center btn" id="center">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other4">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other5">
+                                <input type="button" class="letter
+                                             letter-other btn" id="other6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider-vert" data-content=""></div>
+                <div class="column col-3">
+                    <div class="columns">
+                        <div class="column col-12">
+                            <div class="progress" id="score-bar"></div>
+                        </div>
+                        <div class="column col-12 my-2">
+                            <h5>You have found <span id="num-played" class="text-primary">0
+                                words</span> for <span id="score" class="text-primary">0 points</span>.</h5>
+                        </div>
+                        <div class="column col-12 my-2">
+                            <div id="played-words"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <noscript>This page contains webassembly and javascript content, please enable javascript in your browser.</noscript>
+        <script src="./bootstrap.js"></script>
+    </body>
+</html>

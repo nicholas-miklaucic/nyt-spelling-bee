@@ -1,0 +1,54 @@
+#letter-col {
+    height: 12rem;
+}
+
+#letter-hex {
+    position: absolute;
+    left: 50%;
+    width: 10rem;
+    margin-left: -5.4rem;
+}
+
+.letter {
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#other1 {
+    left: 2rem;
+    top: 0rem;
+}
+
+#other2 {
+    left: 6rem;
+    top: 0rem;
+}
+
+#other3 {
+    left: 0rem;
+    top: 3.46rem;
+}
+
+#center {
+    left: 4rem;
+    top: 3.46rem;
+}
+
+#other4 {
+    left: 8rem;
+    top: 3.46rem;
+}
+
+#other5 {
+    left: 2rem;
+    top: 6.92rem;
+}
+
+#other6 {
+    left: 6rem;
+    top: 6.92rem;
+}

@@ -1,0 +1,32 @@
+    @font-face{
+        font-family:"Applied Sans W01 Thin";
+        src:url("Fonts/198c2095-dbb0-4081-b279-356541474a8b.woff2") format("woff2"),url("Fonts/bff75705-04bd-4e80-93d7-ee67e556bd23.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 UltraLight";
+        src:url("Fonts/ad41ee97-c0d7-4f57-b3a9-a5f0e5598456.woff2") format("woff2"),url("Fonts/aa50cf2e-8f74-4317-a0aa-43902e3e8180.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 Light";
+        src:url("Fonts/3e763f43-c1f7-440c-8592-cb253ff58095.woff2") format("woff2"),url("Fonts/01bf77f8-8fcc-4fd3-bca5-1edd2cf98ca9.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 Regular";
+        src:url("Fonts/4063af43-64b6-43d0-a26e-06aa4f85363d.woff2") format("woff2"),url("Fonts/3dcd51dd-b610-42f0-aac7-c434471cd2fb.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 Medium";
+        src:url("Fonts/ef5acfbd-ac6c-4686-9e7c-ae99c0aeeb06.woff2") format("woff2"),url("Fonts/d7d3fa00-96bc-4a38-a20a-1566aa9b3f5e.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 Bold";
+        src:url("Fonts/46df8cfa-8e15-42de-9720-aba591256375.woff2") format("woff2"),url("Fonts/a74fcfe7-67b6-4553-92f7-f5be60252c75.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 Black";
+        src:url("Fonts/c41cf10f-059f-4a9c-bea1-b23be42a13fa.woff2") format("woff2"),url("Fonts/76660e90-37e4-4c4d-8091-30a06f09cb51.woff") format("woff");
+    }
+    @font-face{
+        font-family:"Applied Sans W01 UltraBlack";
+        src:url("Fonts/7c825263-fc78-40ea-8e0e-63185d25be7c.woff2") format("woff2"),url("Fonts/de1f093a-629c-4bbd-bab0-85481537bfcb.woff") format("woff");
+    }

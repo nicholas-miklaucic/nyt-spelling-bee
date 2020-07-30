@@ -1,0 +1,157 @@
+:root {
+    --fg-color: #252525;
+    --bg-color: #efefef;
+    --accent-color: #5755d9;
+    --secondary-color: #2222cf;
+}
+
+[data-theme="dark"] {
+    --fg-color: #efefef;
+    --bg-color: #252525;
+    --accent-color: #5755d9;
+    --secondary-color: : #2222cf;
+}
+
+body {
+    background-color: var(--bg-color);
+}
+
+* {
+    font-family: "Applied Sans", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+    color: var(--fg-color);
+}
+
+#body {
+    margin-top: 1rem;
+}
+
+#curr-word {
+    display: inline-block;
+    height: 5.2rem;
+    width: 100%;
+    min-width: 1rem;
+    font-size: 4rem;
+    text-align: left;
+    vertical-align: baseline;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-bottom: 1px solid grey;
+}
+
+#curr-word:empty:not(:focus):before {
+    content: attr(data-ph);
+    color: grey;
+    font-size: 2rem;
+    vertical-align: middle;
+    font-style: italic;
+    text-transform: none;
+}
+
+#curr-word:empty:before {
+    content: attr(data-ph);
+    color: #555;
+}
+
+#curr-word:empty:focus:before {
+    content: "";
+}
+
+#submit {
+    height: 3rem;
+    font-size: 1.5rem;
+    margin: 1rem auto;
+    border-radius: 0.5em;
+}
+
+a.btn.btn-word {
+    margin: 0.2em;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+#alert-box {
+    width: 50%;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+#toggle-theme {
+    background-color: var(--bg-color);
+}
+
+#score-bar-container {
+    height: 3rem;
+}
+
+#score-bar {
+    margin-bottom: 1.5rem;
+}
+
+#letter-col {
+    height: 12rem;
+}
+
+#letter-hex {
+    position: absolute;
+    left: 50%;
+    width: 10rem;
+    margin-left: -5.4rem;
+}
+
+.letter {
+    position: absolute;
+    width: 3.2rem;
+    height: 3.2rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+
+    background-color: var(--bg-color);
+    color: var(--fg-color);
+}
+
+.letter-center {
+    background-color: var(--bg-color);
+    color: var(--accent-color);
+}
+
+#other1 {
+    left: 2rem;
+    top: 0rem;
+}
+
+#other2 {
+    left: 6rem;
+    top: 0rem;
+}
+
+#other3 {
+    left: 0rem;
+    top: 3.46rem;
+}
+
+#center {
+    left: 4rem;
+    top: 3.46rem;
+}
+
+#other4 {
+    left: 8rem;
+    top: 3.46rem;
+}
+
+#other5 {
+    left: 2rem;
+    top: 6.92rem;
+}
+
+#other6 {
+    left: 6rem;
+    top: 6.92rem;
+}

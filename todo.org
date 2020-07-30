@@ -1,0 +1,15 @@
+#+TITLE: Todo
+
+- [ ] Add landing page
+- [ ] Copy description of center letters to storage
+- [ ] Put played words in local storage?
+- [X] Light-dark theme
+- [ ] Real panel
+- [X] Fonts
+- [X] Score
+- [X] Progress bar
+- [ ] Hosting
+- [X] Better alerts
+- [ ] Fix fonts on personal website (mono)
+- [ ] Email Briony
+- [ ] Doom Emacs tab behavior, electric
